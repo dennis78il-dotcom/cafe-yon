@@ -1,0 +1,35 @@
+{
+  "he": {
+    "h2": "Coffee Setup",
+    "lead": "יש ימים שפשוט אי אפשר לעבוד מהבית. מחפשים מקום לפתוח בו את היום, לעבוד כמה שעות או סתם לשבת בנחת? אנחנו כאן בשבילכם.",
+    "price": "45 ₪",
+    "incl": "החבילה כוללת",
+    "items": [
+      "☕ משקה לבחירה — חם או קר",
+      "🥪 כריך מהמטבח שלנו",
+      "🍪 עוגייה לצד הקפה"
+    ]
+  },
+  "en": {
+    "h2": "Coffee Setup",
+    "lead": "Some days you just can't work from home. Looking for a place to start your day, get a few hours of work in, or simply sit back and relax? We're right here.",
+    "price": "45 ₪",
+    "incl": "The setup includes",
+    "items": [
+      "☕ A drink of your choice — hot or iced",
+      "🥪 A sandwich from our kitchen",
+      "🍪 A cookie on the side"
+    ]
+  },
+  "ru": {
+    "h2": "Coffee Setup",
+    "lead": "Бывают дни, когда из дома просто не поработать. Ищете место, чтобы начать день, поработать пару часов или просто спокойно посидеть? Мы здесь, ждём вас.",
+    "price": "45 ₪",
+    "incl": "В набор входит",
+    "items": [
+      "☕ Напиток на выбор — горячий или холодный",
+      "🥪 Сэндвич из нашей кухни",
+      "🍪 Печенье к кофе"
+    ]
+  }
+}

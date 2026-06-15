@@ -1,0 +1,98 @@
+{
+  "he": {
+    "list": [
+      {
+        "day": "21",
+        "mon": "יוני",
+        "name": "קווים של הדר — גרפיקה של אנה קריצ'בסקי",
+        "desc": "פתיחה ב-19:00, כניסה חופשית",
+        "detail": "תערוכת יחיד של אנה קריצ'בסקי — סדרת עבודות גרפיקה בהשראת רחובות הדר. הפתיחה ב-21 ביוני בשעה 19:00, בנוכחות האמנית. הכניסה חופשית, והתערוכה תוצג אצלנו לאורך החודש. (טקסט לדוגמה — תוכלו לערוך אותו.)"
+      },
+      {
+        "day": "28",
+        "mon": "יוני",
+        "name": "סדנת לאטה-ארט למתחילים",
+        "desc": "שעתיים תרגול ליד הבר, בהרשמה",
+        "detail": "סדנה קטנה ואינטימית ליד הבר: נלמד את היסודות של מזיגת חלב וציור בקפה. שעתיים, כולל כל הקפה שתשתו. מתאים למתחילים, מספר המקומות מוגבל — בהרשמה מראש. (טקסט לדוגמה.)"
+      },
+      {
+        "day": "05",
+        "mon": "יולי",
+        "name": "ערב ג'אז: שלישיית כרמל",
+        "desc": "מוזיקה חיה, התחלה ב-20:00",
+        "detail": "ערב מוזיקה חיה עם שלישיית כרמל — ג'אז קלאסי באווירה חמימה. מתחילים ב-20:00, מומלץ להגיע מוקדם לתפוס מקום. (טקסט לדוגמה.)"
+      },
+      {
+        "day": "12",
+        "mon": "יולי",
+        "name": "סיפורו של הקפה: מאתיופיה לחיפה",
+        "desc": "הרצאה עם טעימות, כניסה חופשית",
+        "detail": "הרצאה על המסע של הקפה מאתיופיה ועד הספל שלכם, עם טעימות של זנים שונים. כניסה חופשית. (טקסט לדוגמה.)"
+      }
+    ]
+  },
+  "en": {
+    "list": [
+      {
+        "day": "21",
+        "mon": "June",
+        "name": "Lines of Hadar — graphics by Anna Krichevsky",
+        "desc": "Opening at 7 pm, free entry",
+        "detail": "A solo show by Anna Krichevsky — a series of graphic works inspired by the streets of Hadar. Opening June 21 at 7 pm with the artist present. Free entry; the show stays up all month. (Sample text — you'll be able to edit it.)"
+      },
+      {
+        "day": "28",
+        "mon": "June",
+        "name": "Latte art for beginners",
+        "desc": "Two hours of practice at the bar, by sign-up",
+        "detail": "A small, hands-on workshop at the bar: learn the basics of milk pouring and latte art. Two hours, all your coffee included. Beginner-friendly, limited spots — sign up in advance. (Sample text.)"
+      },
+      {
+        "day": "05",
+        "mon": "July",
+        "name": "Jazz night: the Carmel Trio",
+        "desc": "Live music, starts at 8 pm",
+        "detail": "An evening of live music with the Carmel Trio — classic jazz in a warm setting. Starts at 8 pm; come early to grab a seat. (Sample text.)"
+      },
+      {
+        "day": "12",
+        "mon": "July",
+        "name": "The story of coffee: from Ethiopia to Haifa",
+        "desc": "A talk with tastings, free entry",
+        "detail": "A talk on coffee's journey from Ethiopia to your cup, with tastings of different origins. Free entry. (Sample text.)"
+      }
+    ]
+  },
+  "ru": {
+    "list": [
+      {
+        "day": "21",
+        "mon": "июня",
+        "name": "«Линии Хадара» — графика Анны Кричевской",
+        "desc": "Открытие в 19:00, вход свободный",
+        "detail": "Персональная выставка Анны Кричевской — серия графики, вдохновлённой улицами Хадара. Открытие 21 июня в 19:00, художница будет присутствовать. Вход свободный, выставка работает весь месяц. (Текст-образец — вы сможете его изменить.)"
+      },
+      {
+        "day": "28",
+        "mon": "июня",
+        "name": "Латте-арт для начинающих",
+        "desc": "2 часа практики у стойки, по записи",
+        "detail": "Небольшой практический семинар у стойки: научимся основам вливания молока и рисунка на кофе. Два часа, весь кофе включён. Подходит новичкам, мест немного — запись заранее. (Текст-образец.)"
+      },
+      {
+        "day": "05",
+        "mon": "июля",
+        "name": "Джазовый вечер: трио «Кармель»",
+        "desc": "Живая музыка, начало в 20:00",
+        "detail": "Вечер живой музыки с трио «Кармель» — классический джаз в тёплой атмосфере. Начало в 20:00, приходите пораньше занять место. (Текст-образец.)"
+      },
+      {
+        "day": "12",
+        "mon": "июля",
+        "name": "История кофе: от Эфиопии до Хайфы",
+        "desc": "Лекция с дегустацией, вход свободный",
+        "detail": "Лекция о пути кофе от Эфиопии до вашей чашки, с дегустацией разных сортов. Вход свободный. (Текст-образец.)"
+      }
+    ]
+  }
+}

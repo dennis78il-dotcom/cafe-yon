@@ -1,0 +1,93 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+# Café Yon content panel (Sveltia CMS)
+backend:
+  name: github
+  repo: dennis78il-dotcom/cafe-yon
+  branch: main
+
+# Photos are built into the site for now; image uploading is added in a later step.
+media_folder: "images"
+public_folder: "/images"
+
+# Three languages; Hebrew is the default. Each entry shows HE / EN / RU tabs.
+i18n:
+  structure: single_file
+  locales: [he, en, ru]
+  default_locale: he
+
+collections:
+  - name: menu
+    label: "Menu - drinks, food, beans"
+    files:
+      - name: menu
+        label: "Menu items & prices"
+        file: "menu.json"
+        i18n: true
+        fields:
+          - label: "Coffee"
+            name: coffee
+            widget: list
+            i18n: true
+            fields:
+              - { label: "Name", name: n, widget: string, i18n: true }
+              - { label: "Description", name: d, widget: string, i18n: true }
+              - { label: "Price", name: p, widget: string, i18n: true }
+              - { label: "Tag (optional)", name: t, widget: string, i18n: true, required: false }
+          - label: "Sandwiches"
+            name: sandwiches
+            widget: list
+            i18n: true
+            fields:
+              - { label: "Name", name: n, widget: string, i18n: true }
+              - { label: "Description", name: d, widget: string, i18n: true }
+              - { label: "Price", name: p, widget: string, i18n: true }
+          - label: "Desserts"
+            name: desserts
+            widget: list
+            i18n: true
+            fields:
+              - { label: "Name", name: n, widget: string, i18n: true }
+              - { label: "Description", name: d, widget: string, i18n: true }
+              - { label: "Price", name: p, widget: string, i18n: true }
+          - label: "Beans (ROOSTER)"
+            name: beans
+            widget: list
+            i18n: true
+            fields:
+              - { label: "Name", name: n, widget: string, i18n: true }
+              - { label: "Weight", name: w, widget: string, i18n: true }
+              - { label: "Price", name: p, widget: string, i18n: true }
+              - { label: "Description", name: d, widget: string, i18n: true }
+
+  - name: events
+    label: "Events"
+    files:
+      - name: events
+        label: "Upcoming events"
+        file: "events.json"
+        i18n: true
+        fields:
+          - label: "Events"
+            name: list
+            widget: list
+            i18n: true
+            fields:
+              - { label: "Day (number)", name: day, widget: string, i18n: true }
+              - { label: "Month", name: mon, widget: string, i18n: true }
+              - { label: "Title", name: name, widget: string, i18n: true }
+              - { label: "Short line", name: desc, widget: string, i18n: true }
+              - { label: "Full details", name: detail, widget: text, i18n: true }
+
+  - name: specials
+    label: "Specials (Coffee Setup)"
+    files:
+      - name: specials
+        label: "The deal"
+        file: "specials.json"
+        i18n: true
+        fields:
+          - { label: "Title", name: h2, widget: string, i18n: true }
+          - { label: "Intro text", name: lead, widget: text, i18n: true }
+          - { label: "Price", name: price, widget: string, i18n: true }
+          - { label: "Includes (header)", name: incl, widget: string, i18n: true }
+          - { label: "Items in the deal", name: items, widget: list, i18n: true }
