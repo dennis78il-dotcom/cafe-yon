@@ -848,12 +848,18 @@ if(form) form.addEventListener("submit", function(ev){
     t.booking.l_email+": "+(data.email||"—") ];
   document.getElementById("waBtn").href = "https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(lines.join("\n"));
   // email: notify owner + confirm to customer (in their language)
-  if(EMAIL_ON){
+  if(EMAILJS.publicKey.indexOf("YOUR_")===-1 && typeof emailjs!=="undefined"){
+    try{ emailjs.init({publicKey:EMAILJS.publicKey}); }catch(e){}
     var subj = (currentLang==="he"?"בקשה חדשה":currentLang==="ru"?"Новая заявка":"New booking")+" — "+name+" ("+data.date+")";
-    try{
-      emailjs.send(EMAILJS.serviceId, EMAILJS.templateId, { to_email: OWNER_EMAIL, subject: subj, message: lines.join("<br>") });
-      if(data.email){ emailjs.send(EMAILJS.serviceId, EMAILJS.templateId, { to_email: data.email, subject: t.booking.em_subject, message: fillTpl(t.booking.em_body, data) }); }
-    }catch(e){}
+    var ejOpts = {publicKey:EMAILJS.publicKey};
+    emailjs.send(EMAILJS.serviceId, EMAILJS.templateId, { to_email: OWNER_EMAIL, subject: subj, message: lines.join("<br>") }, ejOpts)
+      .then(function(){ console.log("EmailJS: owner notification sent"); })
+      .catch(function(err){ console.error("EmailJS owner error:", err); });
+    if(data.email){
+      emailjs.send(EMAILJS.serviceId, EMAILJS.templateId, { to_email: data.email, subject: t.booking.em_subject, message: fillTpl(t.booking.em_body, data) }, ejOpts)
+        .then(function(){ console.log("EmailJS: customer confirmation sent"); })
+        .catch(function(err){ console.error("EmailJS customer error:", err); });
+    }
   }
   form.style.display = "none"; confirm.classList.add("show"); confirm.scrollIntoView({behavior:"smooth", block:"center"});
 });
