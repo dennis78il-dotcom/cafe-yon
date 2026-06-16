@@ -1,11 +1,3 @@
 {
-  "days": [
-    {
-      "date": "2026-06-17",
-      "closed": false,
-      "open": "",
-      "close": "",
-      "note": ""
-    }
-  ]
+  "days": []
 }
