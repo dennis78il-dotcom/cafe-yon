@@ -257,6 +257,7 @@
   .hours li.hspecial .hd,.hours li.hspecial .ht{color:var(--rust);font-weight:700}
   .wa-cta{background:#1faa52;margin-block-end:8px}
   .wa-cta:hover{background:#178a43}
+  .dir-btns{display:flex;flex-wrap:wrap;gap:10px;margin-block-start:6px}
   .find-contact{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin-block-start:16px;font-weight:600}
   .find-contact a{color:var(--ink)}
   .find-contact a:hover{color:var(--rust)}
@@ -580,10 +581,13 @@
       <p class="find-addr" data-t="about.v1"></p>
       <h3 class="hours-title" data-t="find.hoursTitle"></h3>
       <ul class="hours" id="hoursList"></ul>
-      <a class="cta" target="_blank" rel="noopener" data-t="find.directions" href="https://www.google.com/maps/search/?api=1&query=Pevzner%20St%2029%20Haifa"></a>
+      <h3 class="hours-title" data-t="find.directions" style="margin-block-start:18px"></h3>
+      <div class="dir-btns">
+        <a class="cta" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pevzner%20St%2029%20Haifa">Google Maps</a>
+        <a class="cta ghost" target="_blank" rel="noopener" href="https://ul.waze.com/ul?place=ChIJw2B-XwC7HRURB2XPGeBZ_1U&ll=32.80712460%2C34.99885890&navigate=yes">Waze</a>
+      </div>
       <div class="find-contact">
         <a href="tel:+972505883061" data-t="footer.phone"></a>
-        <a class="wa-link" href="https://wa.me/972505883061" target="_blank" rel="noopener" data-t="wa"></a>
         <a href="mailto:Cafe.yon.hadar@gmail.com" data-t="footer.email"></a>
       </div>
     </div>
@@ -628,7 +632,7 @@ var SPECIAL_HOURS = {};
    Paste the 3 values from emailjs.com (Account → API key, your Email Service ID,
    and the Template ID). Until then, WhatsApp + on-page confirmation still work. */
 const EMAILJS = { publicKey:"XlQl0RPALFzSz-kZx", serviceId:"service_me6tjar", templateId:"template_zyuvi7h" };
-const OWNER_EMAIL = "dennis78il@gmail.com"; // TEST address - switch back to Cafe.yon.hadar@gmail.com after verifying
+const OWNER_EMAIL = "Cafe.yon.hadar@gmail.com"; // café inbox — owner notifications go here
 const WA_NUMBER = "972505883061";
 var EMAIL_ON = false;
 try{ if(window.emailjs && EMAILJS.publicKey.indexOf("YOUR_")===-1){ emailjs.init({publicKey:EMAILJS.publicKey}); EMAIL_ON=true; } }catch(e){}
