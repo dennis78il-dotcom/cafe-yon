@@ -1,0 +1,35 @@
+{
+  "he": {
+    "about": "על המקום",
+    "menu": "תפריט · קפה",
+    "beans": "חדש · לקחת הביתה",
+    "kitchen": "תפריט · מטבח",
+    "specials": "מבצעים",
+    "place": "המקום",
+    "events": "אירועים",
+    "booking": "השכרת המקום",
+    "hours": "שעות פתיחה"
+  },
+  "en": {
+    "about": "About",
+    "menu": "Menu · Coffee",
+    "beans": "New · take it home",
+    "kitchen": "Menu · Kitchen",
+    "specials": "Specials",
+    "place": "The place",
+    "events": "Events",
+    "booking": "Book the space",
+    "hours": "Opening hours"
+  },
+  "ru": {
+    "about": "О месте",
+    "menu": "Меню · Кофе",
+    "beans": "Новинка · домой",
+    "kitchen": "Меню · Кухня",
+    "specials": "Акции",
+    "place": "Место",
+    "events": "Афиша",
+    "booking": "Аренда зала",
+    "hours": "Часы работы"
+  }
+}

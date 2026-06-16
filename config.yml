@@ -18,6 +18,7 @@ i18n:
 collections:
   - name: menu
     label: "Menu - drinks, food, beans"
+    i18n: true
     files:
       - name: menu
         label: "Menu items & prices"
@@ -28,6 +29,7 @@ collections:
             name: coffee
             widget: list
             i18n: true
+            summary: "{{fields.n}}  —  {{fields.p}}"
             fields:
               - { label: "Name", name: n, widget: string, i18n: true }
               - { label: "Description", name: d, widget: string, i18n: true }
@@ -37,6 +39,7 @@ collections:
             name: sandwiches
             widget: list
             i18n: true
+            summary: "{{fields.n}}  —  {{fields.p}}"
             fields:
               - { label: "Name", name: n, widget: string, i18n: true }
               - { label: "Description", name: d, widget: string, i18n: true }
@@ -45,6 +48,7 @@ collections:
             name: desserts
             widget: list
             i18n: true
+            summary: "{{fields.n}}  —  {{fields.p}}"
             fields:
               - { label: "Name", name: n, widget: string, i18n: true }
               - { label: "Description", name: d, widget: string, i18n: true }
@@ -53,6 +57,7 @@ collections:
             name: beans
             widget: list
             i18n: true
+            summary: "{{fields.n}}  —  {{fields.p}}"
             fields:
               - { label: "Name", name: n, widget: string, i18n: true }
               - { label: "Weight", name: w, widget: string, i18n: true }
@@ -61,6 +66,7 @@ collections:
 
   - name: events
     label: "Events"
+    i18n: true
     files:
       - name: events
         label: "Upcoming events"
@@ -71,6 +77,7 @@ collections:
             name: list
             widget: list
             i18n: true
+            summary: "{{fields.day}} {{fields.mon}}  ·  {{fields.name}}"
             fields:
               - { label: "Day (number)", name: day, widget: string, i18n: true }
               - { label: "Month", name: mon, widget: string, i18n: true }
@@ -80,6 +87,7 @@ collections:
 
   - name: specials
     label: "Specials (Coffee Setup)"
+    i18n: true
     files:
       - name: specials
         label: "The deal"
@@ -91,3 +99,97 @@ collections:
           - { label: "Price", name: price, widget: string, i18n: true }
           - { label: "Includes (header)", name: incl, widget: string, i18n: true }
           - { label: "Items in the deal", name: items, widget: list, i18n: true }
+
+  - name: hours
+    label: "Opening hours"
+    files:
+      - name: hours
+        label: "Weekly hours"
+        file: "hours.json"
+        fields:
+          - label: "Sunday — ראשון"
+            name: sun
+            widget: object
+            fields:
+              - { label: "Closed all day?", name: closed, widget: boolean, default: false }
+              - { label: "Opens (e.g. 09:00)", name: open, widget: string, required: false }
+              - { label: "Closes (e.g. 17:00)", name: close, widget: string, required: false }
+          - label: "Monday — שני"
+            name: mon
+            widget: object
+            fields:
+              - { label: "Closed all day?", name: closed, widget: boolean, default: false }
+              - { label: "Opens (e.g. 09:00)", name: open, widget: string, required: false }
+              - { label: "Closes (e.g. 17:00)", name: close, widget: string, required: false }
+          - label: "Tuesday — שלישי"
+            name: tue
+            widget: object
+            fields:
+              - { label: "Closed all day?", name: closed, widget: boolean, default: false }
+              - { label: "Opens (e.g. 09:00)", name: open, widget: string, required: false }
+              - { label: "Closes (e.g. 17:00)", name: close, widget: string, required: false }
+          - label: "Wednesday — רביעי"
+            name: wed
+            widget: object
+            fields:
+              - { label: "Closed all day?", name: closed, widget: boolean, default: false }
+              - { label: "Opens (e.g. 09:00)", name: open, widget: string, required: false }
+              - { label: "Closes (e.g. 17:00)", name: close, widget: string, required: false }
+          - label: "Thursday — חמישי"
+            name: thu
+            widget: object
+            fields:
+              - { label: "Closed all day?", name: closed, widget: boolean, default: false }
+              - { label: "Opens (e.g. 09:00)", name: open, widget: string, required: false }
+              - { label: "Closes (e.g. 17:00)", name: close, widget: string, required: false }
+          - label: "Friday — שישי"
+            name: fri
+            widget: object
+            fields:
+              - { label: "Closed all day?", name: closed, widget: boolean, default: false }
+              - { label: "Opens (e.g. 09:00)", name: open, widget: string, required: false }
+              - { label: "Closes (e.g. 16:00)", name: close, widget: string, required: false }
+          - label: "Saturday — שבת"
+            name: sat
+            widget: object
+            fields:
+              - { label: "Closed all day?", name: closed, widget: boolean, default: false }
+              - { label: "Opens (e.g. 09:00)", name: open, widget: string, required: false }
+              - { label: "Closes (e.g. 17:00)", name: close, widget: string, required: false }
+
+  - name: special
+    label: "Special days"
+    files:
+      - name: special
+        label: "Special / holiday hours"
+        file: "special.json"
+        fields:
+          - label: "Special days (by date)"
+            name: days
+            widget: list
+            summary: "{{fields.date}}  —  {{fields.open}}–{{fields.close}}"
+            fields:
+              - { label: "Date", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+              - { label: "Closed this day?", name: closed, widget: boolean, default: false }
+              - { label: "Opens (e.g. 09:00)", name: open, widget: string, required: false }
+              - { label: "Closes (e.g. 20:30)", name: close, widget: string, required: false }
+              - { label: "Note (optional)", name: note, widget: string, required: false }
+
+  - name: sections
+    label: "Section titles"
+    i18n: true
+    files:
+      - name: sections
+        label: "Section titles"
+        file: "sections.json"
+        i18n: true
+        fields:
+          - { label: "About — section label", name: about, widget: string, i18n: true }
+          - { label: "Coffee menu — section label", name: menu, widget: string, i18n: true }
+          - { label: "Beans — section label", name: beans, widget: string, i18n: true }
+          - { label: "Kitchen menu — section label", name: kitchen, widget: string, i18n: true }
+          - { label: "Specials — section label", name: specials, widget: string, i18n: true }
+          - { label: "Gallery — section label", name: place, widget: string, i18n: true }
+          - { label: "Events — section label", name: events, widget: string, i18n: true }
+          - { label: "Venue rental — section label", name: booking, widget: string, i18n: true }
+          - { label: "Opening hours — title", name: hours, widget: string, i18n: true }
