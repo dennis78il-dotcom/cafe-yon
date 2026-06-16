@@ -850,7 +850,8 @@ if(form) form.addEventListener("submit", function(ev){
   // email: notify owner + confirm to customer (in their language)
   if(EMAILJS.publicKey.indexOf("YOUR_")===-1 && typeof emailjs!=="undefined"){
     try{ emailjs.init({publicKey:EMAILJS.publicKey}); }catch(e){}
-    var subj = (currentLang==="he"?"בקשה חדשה":currentLang==="ru"?"Новая заявка":"New booking")+" — "+name+" ("+data.date+")";
+    var subjDate = String(data.date).replace(/\//g, ".");
+    var subj = (currentLang==="he"?"בקשה חדשה":currentLang==="ru"?"Новая заявка":"New booking")+" — "+name+" ("+subjDate+")";
     var ejOpts = {publicKey:EMAILJS.publicKey};
     emailjs.send(EMAILJS.serviceId, EMAILJS.templateId, { to_email: OWNER_EMAIL, subject: subj, message: lines.join("<br>") }, ejOpts)
       .then(function(){ console.log("EmailJS: owner notification sent"); })
